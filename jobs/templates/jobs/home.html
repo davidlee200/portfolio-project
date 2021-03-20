@@ -8,7 +8,7 @@
   <meta name="author" content="">
   <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-  <title>Dave Lee</title>
+  <title>Tripod-Golf</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
@@ -24,15 +24,15 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'home'%}">Dave Lee</a>
+      <a class="navbar-brand" href="{% url 'home'%}">Tripod-Golf</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="http://twiter.com">Twitter</a>
-          <a class="nav-item nav-link" href="{% static 'me.jpg' %}">Resume</a>
-          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+          <!-- <a class="nav-item nav-link" href="http://twiter.com">Twitter</a> -->
+          <a class="nav-item nav-link" href="{% static 'me.jpg' %}">Membership</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Scores</a>
         </div>
       </div>
     </nav>
@@ -42,12 +42,12 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Hi, I'm Dave</h1>
-        <p class="lead text-muted">This is my first django websites</p>
-        <p>
+        <h1 class="jumbotron-heading">Welcome to Tripod-Golf</h1>
+        <p class="lead text-muted">"If only bogey was the worst score!"</p>
+        <!-- <p>
           <a href="mailto:david.lee200@gmail.com" class="btn btn-primary my-2">Email me!!</a>
-        </p>
-        <img src="{% static 'me.jpg'%}" height=200 width =500/>
+        </p> -->
+        <img src="{% static 'me.jpg'%}" height=100 width =150/>
       </div>
     </section>
     <div class="album py-5 bg-light">
