@@ -1,0 +1,130 @@
+
+{%extends 'base.html'%}
+{% block content %}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+           <td>Course :{{rounds_detail.course_played}}</td>
+           <td>Score :{{rounds_detail.total}}</td>
+           <td>Tees : {{rounds_detail.tee}}</td>  </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+
+                <thead>
+                  <tr>
+                    <th style="width:5%"></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>13</th>
+                    <th>14</th>
+                    <th>15</th>
+                    <th>16</th>
+                    <th>17</th>
+                    <th>18</th>
+                  </tr>
+                </thead>
+
+
+{% for c in cards.all %}
+    {{c.Course_model.course_played}}
+    {{c.course_played}}
+    {{c.Course_model.Par_1}}
+    {{c.hole_1}}
+    {{c.Course_model.Par_1}}
+{% endfor %}
+{% for c in Course_model %}
+
+
+
+            <tr>
+                <td>Par</td>
+                 <td>{{c.Par_1}}</td>
+                 <td>{{c.Par_2}}</td>
+                 <td>{{c.Par_3}}</td>
+                 <td>{{c.Par_4}}</td>
+                 <td>{{c.Par_5}}</td>
+                 <td>{{c.Par_6}}</td>
+                 <td>{{c.Par_7}}</td>
+                 <td>{{c.Par_8}}</td>
+                 <td>{{c.Par_9}}</td>
+                 <td>{{c.Par_10}}</td>
+                 <td>{{c.Par_11}}</td>
+                 <td>{{c.Par_12}}</td>
+                 <td>{{c.Par_13}}</td>
+                 <td>{{c.Par_14}}</td>
+                 <td>{{c.Par_15}}</td>
+                 <td>{{c.Par_16}}</td>
+                 <td>{{c.Par_17}}</td>
+                 <td>{{c.Par_18}}</td>
+            </tr>
+            <tr>
+             <td>Score</td>
+             <td>{{rounds_detail.hole_1}}</td>
+             <td>{{rounds_detail.hole_2}}</td>
+             <td>{{rounds_detail.hole_3}}</td>
+             <td>{{rounds_detail.hole_4}}</td>
+             <td>{{rounds_detail.hole_5}}</td>
+             <td>{{rounds_detail.hole_6}}</td>
+             <td>{{rounds_detail.hole_7}}</td>
+             <td>{{rounds_detail.hole_8}}</td>
+             <td>{{rounds_detail.hole_9}}</td>
+             <td>{{rounds_detail.hole_10}}</td>
+             <td>{{rounds_detail.hole_11}}</td>
+             <td>{{rounds_detail.hole_12}}</td>
+             <td>{{rounds_detail.hole_13}}</td>
+             <td>{{rounds_detail.hole_14}}</td>
+             <td>{{rounds_detail.hole_15}}</td>
+             <td>{{rounds_detail.hole_16}}</td>
+             <td>{{rounds_detail.hole_17}}</td>
+             <td>{{rounds_detail.hole_18}}</td>
+             </tr>
+             <tr>
+              <td>Score</td>
+
+              <td>{{rounds_detail.hole_1}}</td>
+              <td>{{rounds_detail.hole_2}}</td>
+              <td>{{rounds_detail.hole_3}}</td>
+              <td>{{rounds_detail.hole_4}}</td>
+              <td>{{rounds_detail.hole_5}}</td>
+              <td>{{rounds_detail.hole_6}}</td>
+              <td>{{rounds_detail.hole_7}}</td>
+              <td>{{rounds_detail.hole_8}}</td>
+              <td>{{rounds_detail.hole_9}}</td>
+              <td>{{rounds_detail.hole_10}}</td>
+              <td>{{rounds_detail.hole_11}}</td>
+              <td>{{rounds_detail.hole_12}}</td>
+              <td>{{rounds_detail.hole_13}}</td>
+              <td>{{rounds_detail.hole_14}}</td>
+              <td>{{rounds_detail.hole_15}}</td>
+              <td>{{rounds_detail.hole_16}}</td>
+              <td>{{rounds_detail.hole_17}}</td>
+              <td>{{rounds_detail.hole_18}}</td>
+              </tr>
+  {% endfor %}
+
+
+            </table>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,66 @@
+<!doctype html>
+
+{%extends 'base.html'%}
+{% block content%}
+
+{% if error %}
+{{error}}
+
+
+{% endif %}
+
+<!-- <h3> Sign up! </h3> -->
+<!-- <form method='POST' action = "{% url 'signup'%}"> -->
+
+
+
+<!-- {% csrf_token %} -->
+
+    <main role="main">
+    <div class ="container">
+    <h5 class ="text-center pt-2">Sign up!</h5>
+    <form method='POST' action = "{% url 'signup'%}">
+      {% csrf_token %}
+   <br/>
+     Username:
+     <br/>
+    <input type='text' name='username' />
+     <br/>
+     <br/>
+    Password:
+    <br/>
+    <input type='password' name='password1' />
+    <br/>
+    <br/>
+    Confirm Password:
+    <br/>
+    <input type='password' name='password2' />
+    <br/>
+    <br/>
+    <Hr/>
+    <input class="btn btn-primary" type='submit' value= 'Sign Up!' />
+  </form>
+  <div/>
+  </main>
+
+
+
+
+<!-- Username:
+<br/>
+<input type='text' name='username' />
+<br/>
+Password:
+<br/>
+<input type='password' name='password1' />
+<br/>
+Confirm Password:
+<br/>
+<input type='password' name='password2' />
+<br/>
+<br/>
+<br/>
+<input class="btn btn-primary" type='submit' value= 'Sign Up!' />
+</form>
+</p> -->
+{% endblock%}

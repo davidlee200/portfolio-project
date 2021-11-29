@@ -1,0 +1,141 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Enter round details below:</h1>
+
+</div>
+<P>
+
+
+<form method = "POST" action ="">
+  {% csrf_token %}
+    <!-- {{ form.as_p}} -->
+
+
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary"> Course Played:  {{ form.course_played}}  </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th style="width:10%">Hole</th>
+                            <th style="width:10%">Score</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+
+                            <td> 1 </td>
+                            <td> {{ form.Par_1}}</td>
+
+                      </tr>
+                        <tr>
+                          <td>2</td>
+                          <td> {{ form.Par_2}}</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td> {{ form.Par_3}}</td>
+
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td> {{ form.Par_4}}</td>
+
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td> {{ form.Par_5}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 6  </td>
+                          <td> {{ form.Par_6}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 7  </td>
+                          <td> {{ form.Par_7}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 8  </td>
+                          <td> {{ form.Par_8}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 9  </td>
+                          <td> {{ form.Par_8}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 9  </td>
+                          <td> {{ form.Par_9}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 10  </td>
+                          <td> {{ form.Par_10}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 11  </td>
+                          <td> {{ form.Par_11}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 12  </td>
+                          <td> {{ form.Par_12}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 13  </td>
+                          <td> {{ form.Par_13}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 14  </td>
+                          <td> {{ form.Par_14}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 15  </td>
+                          <td> {{ form.Par_15}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 16  </td>
+                          <td> {{ form.Par_16}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 17  </td>
+                          <td> {{ form.Par_17}}</td>
+
+                        </tr>
+                        <tr>
+                          <td> 18  </td>
+                          <td> {{ form.Par_18}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock content %}

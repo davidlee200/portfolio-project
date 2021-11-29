@@ -1,0 +1,73 @@
+
+{%extends 'base.html'%}
+
+{% block content %}
+
+
+<form method="GET">
+  <input type="text" name="search-area" value = "{{search_input}}">
+  <input type="submit" name="" value="Search">
+</form>
+
+<table >
+<tr>
+  <th>Course Played </th>
+  <th>Date Played </th>
+  <th>Tees </th>
+  <th>Score </th>
+  <th>Link </th>
+  <th> </th>
+  <th> </th>
+</tr>
+
+
+ {% for c in Course_model %}
+ {{c.course_played}}
+    {{c.Par_1}}
+{% endfor %}
+ {% for round in rounds %}
+<tr>
+  <td>{{round.course_played}}</td>
+  <td>{{round.pub_date_pretty}}</td>
+  <td>{{round.tee}}</td>
+  <td>{{round.total}}</td>
+  <td> <a href = "{% url 'details' round.id %}"> View </a></td>
+  <td> <a href = "{% url 'update-round' round.id %}"> Edit </a></td>
+  <td> <a href = "{% url 'delete-round' round.id %}"> Delete </a></td>
+</tr>
+{% endfor %}
+<td>
+
+<br>
+<a href="{% url 'create-lesson' %}"> Add Lesson </a>
+<hr>
+{% for l in lessons %}
+  <tr>
+   <td>{{l.date}}</td>
+   <td>{{l.Lesson}}</td>
+   <td> <a href = "{% url 'update-lesson' l.id %}"> Edit </a></td>
+   <td> <a href = "{% url 'delete-lesson' l.id %}"> Delete </a></td>
+  </tr>
+{% endfor %}
+  <td>
+
+
+    <br>
+    <a href="{% url 'create-course' %}"> Add Course </a>
+    <hr>
+{% for l in Course_model %}
+  <tr>
+   <td>{{l.course_played}}</td>
+   <td>{{l.par}}</td>
+   <td> <a href = "{% url 'update-course' l.id %}"> Edit </a></td>
+   <td> <a href = "{% url 'delete-course' l.id %}"> Delete </a></td>
+  </tr>
+{% endfor %}
+
+
+
+{% endblock content %}
+
+<!-- {% for member in object_list%}
+{{member.id}}-{{member.course_played}}-{{member.tee}}-{{member.hole_1}}<br>
+{% endfor %} -->

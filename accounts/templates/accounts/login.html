@@ -1,0 +1,38 @@
+<!doctype html>
+
+{%extends 'base.html'%}
+{% block content%}
+{% if error %}
+
+{{error}}
+
+{% endif %}
+
+
+    <main role="main">
+    <div class ="container">
+    <h5 class ="text-center pt-2">Login!</h5>
+    <form method='POST' action = "{% url 'login'%}">
+      {% csrf_token %}
+   <br/>
+     Username:
+     <br/>
+    <input type='text' name='username' />
+     <br/>
+     <br/>
+    Password:
+    <br/>
+    <input type='password' name='password' />
+    <br/>
+    <br/>
+
+    <br/>
+    <br/>
+    <Hr/>
+    <input class="btn btn-primary" type='submit' value= 'Login' />
+  </form>
+  <div/>
+  </main>
+
+
+{% endblock%}

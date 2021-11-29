@@ -1,0 +1,222 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Enter round details below:</h1>
+
+</div>
+<P>
+
+
+<form method = "POST" action ="">
+  {% csrf_token %}
+    <!-- {{ form.as_p}} -->
+
+
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary"> Course Played  {{ form.course_played}} Tees      {{ form.tee}} </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th style="width:10%">Hole</th>
+                            <th style="width:10%">Score</th>
+                          <th style="width:10%">airway</th>
+                            <th style="width:10%">Green</th>
+                              <th style="width:10%">Putts</th>
+                            <th style="width:10%">Up and Down</th>
+                            <th style="width:10%">Bunker</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+
+                            <td> 1 </td>
+                            <td> {{ form.hole_1}}</td>
+                            <td> {{ form.fairway}}</td>
+                            <td> {{ form.green}}</td>
+                            <td> {{ form.putts}}</td>
+                            <td> {{ form.up_and_down}}</td>
+                            <td> {{ form.bunker_up_and_down}}</td>
+                      </tr>
+                        <tr>
+                          <td>2</td>
+                          <td> {{ form.hole_2}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td> {{ form.hole_3}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td> {{ form.hole_4}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td> {{ form.hole_5}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 6  </td>
+                          <td> {{ form.hole_6}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 7  </td>
+                          <td> {{ form.hole_7}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 8  </td>
+                          <td> {{ form.hole_8}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 9  </td>
+                          <td> {{ form.hole_8}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 9  </td>
+                          <td> {{ form.hole_9}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 10  </td>
+                          <td> {{ form.hole_10}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 11  </td>
+                          <td> {{ form.hole_11}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 12  </td>
+                          <td> {{ form.hole_12}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 13  </td>
+                          <td> {{ form.hole_13}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 14  </td>
+                          <td> {{ form.hole_14}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 15  </td>
+                          <td> {{ form.hole_15}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 16  </td>
+                          <td> {{ form.hole_16}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 17  </td>
+                          <td> {{ form.hole_17}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                        <tr>
+                          <td> 18  </td>
+                          <td> {{ form.hole_18}}</td>
+                          <td> {{ form.fairway}}</td>
+                          <td> {{ form.green}}</td>
+                          <td> {{ form.putts}}</td>
+                          <td> {{ form.up_and_down}}</td>
+                          <td> {{ form.bunker_up_and_down}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock content %}
