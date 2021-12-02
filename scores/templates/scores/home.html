@@ -1,73 +1,85 @@
-
 {%extends 'base.html'%}
 
 {% block content %}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+           <td>Admin</td>
+         </h6>
+    </div>
 
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
-<form method="GET">
-  <input type="text" name="search-area" value = "{{search_input}}">
-  <input type="submit" name="" value="Search">
-</form>
+              <thead>
 
-<table >
-<tr>
-  <th>Course Played </th>
-  <th>Date Played </th>
-  <th>Tees </th>
-  <th>Score </th>
-  <th>Link </th>
-  <th> </th>
-  <th> </th>
-</tr>
+                  <tr>
+                    <th>Type </th>
+                    <th>Course Played </th>
+                    <th>Date Played </th>
+                    <th>Tees </th>
+                    <th>Score </th>
+                    <th>Details </th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                {% for round in rounds %}
+                <tr>
+                <td>Data </td>
+                <td>{{round.course_played}}</td>
+                <td>{{round.pub_date_pretty}}</td>
+                <td>{{round.tee}}</td>
+                <td>{{round.total}}</td>
+                <td> <a href = "{% url 'details' round.id %}"> View </a></td>
+                <td> <a href = "{% url 'update-round' round.id %}"> Edit </a></td>
+                <td> <a href = "{% url 'delete-round' round.id %}"> Delete </a></td>
 
+              {% endfor %}
+          </tr>
 
- {% for c in Course_model %}
- {{c.course_played}}
-    {{c.Par_1}}
-{% endfor %}
- {% for round in rounds %}
-<tr>
-  <td>{{round.course_played}}</td>
-  <td>{{round.pub_date_pretty}}</td>
-  <td>{{round.tee}}</td>
-  <td>{{round.total}}</td>
-  <td> <a href = "{% url 'details' round.id %}"> View </a></td>
-  <td> <a href = "{% url 'update-round' round.id %}"> Edit </a></td>
-  <td> <a href = "{% url 'delete-round' round.id %}"> Delete </a></td>
-</tr>
-{% endfor %}
-<td>
+        </table>
 
-<br>
-<a href="{% url 'create-lesson' %}"> Add Lesson </a>
-<hr>
-{% for l in lessons %}
-  <tr>
-   <td>{{l.date}}</td>
-   <td>{{l.Lesson}}</td>
-   <td> <a href = "{% url 'update-lesson' l.id %}"> Edit </a></td>
-   <td> <a href = "{% url 'delete-lesson' l.id %}"> Delete </a></td>
-  </tr>
-{% endfor %}
-  <td>
+    </div>
+</div>
+</div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+           <td>Admin</td>
+         </h6>
+    </div>
 
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
-    <br>
-    <a href="{% url 'create-course' %}"> Add Course </a>
-    <hr>
-{% for l in Course_model %}
-  <tr>
-   <td>{{l.course_played}}</td>
-   <td>{{l.par}}</td>
-   <td> <a href = "{% url 'update-course' l.id %}"> Edit </a></td>
-   <td> <a href = "{% url 'delete-course' l.id %}"> Delete </a></td>
-  </tr>
-{% endfor %}
+              <thead>
 
+                  <tr>
+                    <th>Course Played </th>
+                    <th>Date Played </th>
 
+                    <th>Update</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                {% for l in Course_model %}
+                <tr>
+
+                <td>{{l.course_played}}</td>
+                <td>{{l.par}}</td>
+                <td> <a href = "{% url 'update-course' l.id %}"> Edit </a></td>
+                <td> <a href = "{% url 'delete-course' l.id %}"> Delete </a></td>
+
+              {% endfor %}
+          </tr>
+
+        </table>
+
+    </div>
+</div>
+</div>
 
 {% endblock content %}
-
-<!-- {% for member in object_list%}
-{{member.id}}-{{member.course_played}}-{{member.tee}}-{{member.hole_1}}<br>
-{% endfor %} -->

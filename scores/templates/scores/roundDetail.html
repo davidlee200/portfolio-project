@@ -1,6 +1,10 @@
 
 {%extends 'base.html'%}
+
 {% block content %}
+
+
+
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -17,35 +21,30 @@
                 <thead>
                   <tr>
                     <th style="width:5%"></th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                    <th>7</th>
-                    <th>8</th>
-                    <th>9</th>
-                    <th>10</th>
-                    <th>11</th>
-                    <th>12</th>
-                    <th>13</th>
-                    <th>14</th>
-                    <th>15</th>
-                    <th>16</th>
-                    <th>17</th>
-                    <th>18</th>
+                    <th style="width:5%"><center>1</center></th>
+                    <th style="width:5%"><center>2</center></th>
+                    <th style="width:5%"><center>3</center></th>
+                    <th style="width:5%"><center>4</center></th>
+                    <th style="width:5%"><center>5</center></th>
+                    <th style="width:5%"><center>6</center></th>
+                    <th style="width:5%"><center>7</center></th>
+                    <th style="width:5%"><center>8</center></th>
+                    <th style="width:5%"><center>9</center></th>
+                    <th style="width:5%"><center>10</center></th>
+                    <th style="width:5%"><center>11</center></th>
+                    <th style="width:5%"><center>12</center></th>
+                    <th style="width:5%"><center>13</center></th>
+                    <th style="width:5%"><center>14</center></th>
+                    <th style="width:5%"><center>15</center></th>
+                    <th style="width:5%"><center>16</center></th>
+                    <th style="width:5%"><center>17</center></th>
+                    <th style="width:5%"><center>18</center></th>
                   </tr>
                 </thead>
 
 
-{% for c in cards.all %}
-    {{c.Course_model.course_played}}
-    {{c.course_played}}
-    {{c.Course_model.Par_1}}
-    {{c.hole_1}}
-    {{c.Course_model.Par_1}}
-{% endfor %}
+
+
 {% for c in Course_model %}
 
 
@@ -73,47 +72,49 @@
             </tr>
             <tr>
              <td>Score</td>
-             <td>{{rounds_detail.hole_1}}</td>
-             <td>{{rounds_detail.hole_2}}</td>
-             <td>{{rounds_detail.hole_3}}</td>
-             <td>{{rounds_detail.hole_4}}</td>
-             <td>{{rounds_detail.hole_5}}</td>
-             <td>{{rounds_detail.hole_6}}</td>
-             <td>{{rounds_detail.hole_7}}</td>
-             <td>{{rounds_detail.hole_8}}</td>
-             <td>{{rounds_detail.hole_9}}</td>
-             <td>{{rounds_detail.hole_10}}</td>
-             <td>{{rounds_detail.hole_11}}</td>
-             <td>{{rounds_detail.hole_12}}</td>
-             <td>{{rounds_detail.hole_13}}</td>
-             <td>{{rounds_detail.hole_14}}</td>
-             <td>{{rounds_detail.hole_15}}</td>
-             <td>{{rounds_detail.hole_16}}</td>
-             <td>{{rounds_detail.hole_17}}</td>
-             <td>{{rounds_detail.hole_18}}</td>
-             </tr>
-             <tr>
-              <td>Score</td>
+             <td bgcolor =  {% if rounds_detail.hole_1 < c.Par_1 %}"CCFFCC"{% endif %}
+               {% if rounds_detail.hole_1 > c.Par_1 %}"#F08080"{% endif %}>{{rounds_detail.hole_1}} </td>
+             <td bgcolor =  {% if rounds_detail.hole_2 < c.Par_2 %}"CCFFCC"{% endif %}
+                 {% if rounds_detail.hole_2 > c.Par_2 %}"#F08080"{% endif %}>{{rounds_detail.hole_2}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_3 < c.Par_3 %}"CCFFCC"{% endif %}
+                {% if rounds_detail.hole_3 > c.Par_3 %}"#F08080"{% endif %}>{{rounds_detail.hole_3}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_4 < c.Par_4 %}"CCFFCC"{% endif %}
+                    {% if rounds_detail.hole_4 > c.Par_4 %}"#F08080"{% endif %}>{{rounds_detail.hole_4}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_5 < c.Par_5 %}"CCFFCC"{% endif %}
+                {% if rounds_detail.hole_5 > c.Par_5 %}"#F08080"{% endif %}>{{rounds_detail.hole_5}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_6 < c.Par_6 %}"CCFFCC"{% endif %}
+                {% if rounds_detail.hole_6 > c.Par_6 %}"#F08080"{% endif %}>{{rounds_detail.hole_6}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_7 < c.Par_7 %}"CCFFCC"{% endif %}
+                {% if rounds_detail.hole_7 > c.Par_7 %}"#F08080"{% endif %}>{{rounds_detail.hole_7}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_8 < c.Par_8 %}"CCFFCC"{% endif %}
+                {% if rounds_detail.hole_8 > c.Par_8 %}"#F08080"{% endif %}>{{rounds_detail.hole_8}} </td>
+                <td bgcolor =  {% if rounds_detail.hole_9 < c.Par_9 %}"CCFFCC"{% endif %}
+                    {% if rounds_detail.hole_9 > c.Par_9 %}"#F08080"{% endif %}>{{rounds_detail.hole_9}} </td>
 
-              <td>{{rounds_detail.hole_1}}</td>
-              <td>{{rounds_detail.hole_2}}</td>
-              <td>{{rounds_detail.hole_3}}</td>
-              <td>{{rounds_detail.hole_4}}</td>
-              <td>{{rounds_detail.hole_5}}</td>
-              <td>{{rounds_detail.hole_6}}</td>
-              <td>{{rounds_detail.hole_7}}</td>
-              <td>{{rounds_detail.hole_8}}</td>
-              <td>{{rounds_detail.hole_9}}</td>
-              <td>{{rounds_detail.hole_10}}</td>
-              <td>{{rounds_detail.hole_11}}</td>
-              <td>{{rounds_detail.hole_12}}</td>
-              <td>{{rounds_detail.hole_13}}</td>
-              <td>{{rounds_detail.hole_14}}</td>
-              <td>{{rounds_detail.hole_15}}</td>
-              <td>{{rounds_detail.hole_16}}</td>
-              <td>{{rounds_detail.hole_17}}</td>
-              <td>{{rounds_detail.hole_18}}</td>
-              </tr>
+            <td bgcolor =  {% if rounds_detail.hole_10 < c.Par_10 %}"CCFFCC"{% endif %}
+              {% if rounds_detail.hole_10 > c.Par_10 %}"#F08080"{% endif %}>{{rounds_detail.hole_10}} </td>
+            <td bgcolor =  {% if rounds_detail.hole_11 < c.Par_11 %}"CCFFCC"{% endif %}
+                {% if rounds_detail.hole_11 > c.Par_11 %}"#F08080"{% endif %}>{{rounds_detail.hole_11}} </td>
+           <td bgcolor =  {% if rounds_detail.hole_12 < c.Par_12 %}"CCFFCC"{% endif %}
+               {% if rounds_detail.hole_12 > c.Par_12 %}"#F08080"{% endif %}>{{rounds_detail.hole_12}} </td>
+           <td bgcolor =  {% if rounds_detail.hole_13 < c.Par_13 %}"CCFFCC"{% endif %}
+                   {% if rounds_detail.hole_13 > c.Par_13 %}"#F08080"{% endif %}>{{rounds_detail.hole_13}} </td>
+           <td bgcolor =  {% if rounds_detail.hole_14 < c.Par_14 %}"CCFFCC"{% endif %}
+               {% if rounds_detail.hole_14 > c.Par_14 %}"#F08080"{% endif %}>{{rounds_detail.hole_14}} </td>
+           <td bgcolor =  {% if rounds_detail.hole_15 < c.Par_15 %}"CCFFCC"{% endif %}
+               {% if rounds_detail.hole_15 > c.Par_15 %}"#F08080"{% endif %}>{{rounds_detail.hole_15}} </td>
+           <td bgcolor =  {% if rounds_detail.hole_16 < c.Par_16 %}"CCFFCC"{% endif %}
+               {% if rounds_detail.hole_16 > c.Par_16 %}"#F08080"{% endif %}>{{rounds_detail.hole_16}} </td>
+           <td bgcolor =  {% if rounds_detail.hole_17 < c.Par_18 %}"CCFFCC"{% endif %}
+               {% if rounds_detail.hole_17 > c.Par_17 %}"#F08080"{% endif %}>{{rounds_detail.hole_17}} </td>
+               <td bgcolor =  {% if rounds_detail.hole_18 < c.Par_18 %}"CCFFCC"{% endif %}
+                   {% if rounds_detail.hole_18 > c.Par_18 %}"#F08080"{% endif %}>{{rounds_detail.hole_18}} </td>
+
+
+
+
+             </tr>
+
   {% endfor %}
 
 

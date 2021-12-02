@@ -52,10 +52,11 @@ class ScoreDetail(DetailView):
         context = super(ScoreDetail,self).get_context_data(**kwargs)
         context['Course_model'] = Course_model.objects.all().filter(
                     course_played__startswith = 'Blarney')
-
-        # context['cards'] = Scores_Out.objects.filter(pk=self.kwargs.get('pk')).select_related('course_played')
-
-        context['cards'] = Scores_Out.objects.all().select_related('course_played')
+     # qs = qs.annotate(
+#     difference = ExpressionWrapper(F('sales_sum') - F('purchase_sum'), output_field=DecimalField())
+        context['cards'] = Scores_Out.objects.filter(pk=self.kwargs.get('pk')).select_related('course_played')
+        print(context['cards'])
+        # context['cards'] = Scores_Out.objects.all().select_related('course_played')
         return context
 
 class ScoreCreate(CreateView):
@@ -87,7 +88,7 @@ class lessonUpdate(UpdateView):
 
 class courseUpdate(UpdateView):
     model = Course_model
-    template_name = 'scores/addData.html'
+    template_name = 'scores/addCourse.html'
     fields = '__all__'
 
 

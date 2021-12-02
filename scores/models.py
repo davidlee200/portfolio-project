@@ -100,6 +100,10 @@ class Scores_Out(models.Model):
         # return reverse_lazy('home', args=[str(self.id)])
         return reverse_lazy('home')
 
+    def verus_par(self):
+        verus_par_1 = self.hole_1 - Course_model.Par_1
+        return verus_par_1
+        
     class Meta:
         ordering = ['pub_date']
         db_table = 'Scores'
